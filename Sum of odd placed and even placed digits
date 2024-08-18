@@ -1,0 +1,33 @@
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+       
+        long N = scanner.nextLong();
+        
+        long oddSum = 0;
+        long evenSum = 0;
+        int position = 1;
+        
+        while (N != 0) {
+            long digit = N % 10;  // Extract the last digit
+            
+            if (position % 2 !=0 ) { // Odd position
+                oddSum += digit;
+            } else { // Even position
+                evenSum += digit;
+            }
+            
+            N /= 10;  // Remove the last digit
+            position++;
+        }
+        
+        System.out.println(oddSum);
+        System.out.println(evenSum);
+        
+        scanner.close();
+    }
+}
