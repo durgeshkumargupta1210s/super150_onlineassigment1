@@ -1,0 +1,17 @@
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        int count = 0;
+        int inv = 0;
+        while(num>0){
+            count++;
+            int rem = num%10;
+            inv = inv + (int)Math.pow(10,(rem-1))*count;
+            num = num/10;
+        }
+        System.out.println(inv);
+
+    }
+}
