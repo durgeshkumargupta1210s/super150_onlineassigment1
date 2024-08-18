@@ -1,0 +1,25 @@
+import java.util.*;
+public class Main {
+    public static void main (String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int n= sc.nextInt();
+        int [] arry = new int[n];
+        for(int i=0; i<n;i++){
+            arry[i]=sc.nextInt();
+        }
+        for(int i :  arry){
+            int count=0;
+            for(int j : arry){
+                if(i==j){
+                    count++;
+                }
+            }
+            if(count>n/2){
+                System.out.print(i);
+                break;
+            }
+            
+        }
+
+    }
+}
